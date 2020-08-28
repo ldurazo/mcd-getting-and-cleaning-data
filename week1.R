@@ -45,3 +45,12 @@ mutate(cran3, correct_size = size + 1000)
 summarize(cran, avg_bytes= mean(size))
 
 # Part 2
+library(dplyr)
+cran <- tbl_df(mydf)
+rm("mydf")
+cran
+?group_by
+
+by_package <- group_by(cran, package)
+by_package
+summarize(by_package, mean(size))
