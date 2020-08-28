@@ -2,6 +2,7 @@
 
 # swirl()
 
+# Part 1
 mydf <- read.csv(path2csv, stringsAsFactors = FALSE)
 dim(mydf)
 head(mydf)
@@ -42,3 +43,5 @@ mutate(cran3, size_mb = size / 2^20, size_gb = size_mb / 2^10)
 mutate(cran3, correct_size = size + 1000)
 
 summarize(cran, avg_bytes= mean(size))
+
+# Part 2
